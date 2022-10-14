@@ -104,47 +104,56 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RHF-YS-tSC">
-                                <rect key="frame" x="0.0" y="47" width="390" height="109"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="47"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="top" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="tey-lK-Qky">
                                         <rect key="frame" x="8" y="8" width="374" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-pa-x32">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="20.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-pa-x32">
+                                                <rect key="frame" x="0.0" y="0.0" width="56.666666666666664" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="03f-XC-Whj">
                                                 <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="Sugar1Switch:" destination="8OA-CA-tq1" eventType="primaryActionTriggered" id="Apb-qt-rhR"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="top" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MqC-tQ-ojU">
-                                        <rect key="frame" x="8" y="39" width="374" height="31"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="top" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MqC-tQ-ojU">
+                                        <rect key="frame" x="8" y="0.0" width="374" height="0.0"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiM-Kz-QKP">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="20.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiM-Kz-QKP">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aW4-nD-flj">
-                                                <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="325" y="0.0" width="51" height="0.0"/>
+                                                <connections>
+                                                    <action selector="Sugar2Switch:" destination="8OA-CA-tq1" eventType="primaryActionTriggered" id="LbT-U3-hjN"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="top" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-d0-dxe">
-                                        <rect key="frame" x="8" y="70" width="374" height="31"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="top" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-d0-dxe">
+                                        <rect key="frame" x="8" y="0.0" width="374" height="0.0"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQM-nA-YsJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="20.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQM-nA-YsJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GqO-Q5-DrL">
-                                                <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="325" y="0.0" width="51" height="0.0"/>
+                                                <connections>
+                                                    <action selector="Sugar3Switch:" destination="8OA-CA-tq1" eventType="primaryActionTriggered" id="rdP-Y3-qJ6"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -162,6 +171,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Order" image="list.bullet.rectangle" catalog="system" selectedImage="list.bullet.rectangle.fill" id="uRS-W9-sAT"/>
+                    <connections>
+                        <outlet property="Sugar1" destination="tey-lK-Qky" id="4AN-6n-99c"/>
+                        <outlet property="Sugar2" destination="MqC-tQ-ojU" id="uQd-Fa-xCb"/>
+                        <outlet property="Sugar3" destination="BRA-d0-dxe" id="wjl-u5-47h"/>
+                        <outlet property="SugarSwitch1" destination="03f-XC-Whj" id="wmf-BW-xSL"/>
+                        <outlet property="SugarSwitch2" destination="aW4-nD-flj" id="94O-Hf-mjz"/>
+                        <outlet property="SugarSwitch3" destination="GqO-Q5-DrL" id="dFz-qp-uV8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ats-ce-UGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
