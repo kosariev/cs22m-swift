@@ -104,13 +104,22 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RHF-YS-tSC">
-                                <rect key="frame" x="0.0" y="47" width="390" height="47"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="78"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="top" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="tey-lK-Qky">
-                                        <rect key="frame" x="8" y="8" width="374" height="31"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LTn-wX-eY3">
+                                        <rect key="frame" x="8" y="8" width="374" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <segments>
+                                            <segment title="Espresso"/>
+                                            <segment title="Americano"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="top" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tey-lK-Qky">
+                                        <rect key="frame" x="8" y="39" width="374" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-pa-x32">
-                                                <rect key="frame" x="0.0" y="0.0" width="56.666666666666664" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="5.3333333333333286" width="56.666666666666664" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -123,8 +132,8 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="top" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MqC-tQ-ojU">
-                                        <rect key="frame" x="8" y="0.0" width="374" height="0.0"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="top" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MqC-tQ-ojU">
+                                        <rect key="frame" x="8" y="70" width="374" height="0.0"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiM-Kz-QKP">
                                                 <rect key="frame" x="0.0" y="0.0" width="59" height="0.0"/>
@@ -140,8 +149,8 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="top" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-d0-dxe">
-                                        <rect key="frame" x="8" y="0.0" width="374" height="0.0"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="top" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-d0-dxe">
+                                        <rect key="frame" x="8" y="70" width="374" height="0.0"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQM-nA-YsJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="0.0"/>
@@ -172,6 +181,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="New Order" image="list.bullet.rectangle" catalog="system" selectedImage="list.bullet.rectangle.fill" id="uRS-W9-sAT"/>
                     <connections>
+                        <outlet property="CoffeeType" destination="LTn-wX-eY3" id="NuW-HQ-IuM"/>
                         <outlet property="Sugar1" destination="tey-lK-Qky" id="4AN-6n-99c"/>
                         <outlet property="Sugar2" destination="MqC-tQ-ojU" id="uQd-Fa-xCb"/>
                         <outlet property="Sugar3" destination="BRA-d0-dxe" id="wjl-u5-47h"/>
@@ -197,6 +207,9 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

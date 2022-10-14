@@ -8,8 +8,11 @@ class NewOrderViewController: UIViewController {
     @IBOutlet weak var SugarSwitch1: UISwitch!
     @IBOutlet weak var SugarSwitch2: UISwitch!
     @IBOutlet weak var SugarSwitch3: UISwitch!
+    @IBOutlet weak var CoffeeType: UISegmentedControl!
 
     @IBAction func Sugar1Switch(_ sender: Any) {
+        print(CoffeeType.selectedSegmentIndex)
+        
         SugarSwitch2.isOn = false
         SugarSwitch3.isOn = false
         if SugarSwitch1.isOn {
