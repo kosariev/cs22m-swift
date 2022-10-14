@@ -34,31 +34,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXm-sJ-2EC">
-                                <rect key="frame" x="47" y="185" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="InChange:" destination="T5m-CH-Rr9" eventType="editingChanged" id="KVB-JF-JYL"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnD-4C-RRK">
-                                <rect key="frame" x="220" y="185" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="OutChange:" destination="T5m-CH-Rr9" eventType="editingChanged" id="EcU-J6-S9N"/>
-                                </connections>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MHZ-ay-8tF">
-                                <rect key="frame" x="0.0" y="267" width="390" height="162"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" id="5gM-oJ-OmV">
+                                <rect key="frame" x="0.0" y="49" width="390" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnD-4C-RRK">
+                                        <rect key="frame" x="220" y="47" width="145" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="145" id="JVR-tu-bgf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="OutChange:" destination="T5m-CH-Rr9" eventType="editingChanged" id="EcU-J6-S9N"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXm-sJ-2EC">
+                                        <rect key="frame" x="25" y="47" width="145" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="145" id="9Vs-ki-PUZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="InChange:" destination="T5m-CH-Rr9" eventType="editingChanged" id="KVB-JF-JYL"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gXm-sJ-2EC" firstAttribute="centerY" secondItem="5gM-oJ-OmV" secondAttribute="centerY" id="3mu-Vb-bfB"/>
+                                    <constraint firstItem="fnD-4C-RRK" firstAttribute="centerY" secondItem="5gM-oJ-OmV" secondAttribute="centerY" id="8e2-Uh-gIE"/>
+                                    <constraint firstItem="gXm-sJ-2EC" firstAttribute="centerX" secondItem="5gM-oJ-OmV" secondAttribute="centerX" multiplier="0.5" id="9Pd-8q-Fmx"/>
+                                    <constraint firstItem="fnD-4C-RRK" firstAttribute="width" secondItem="gXm-sJ-2EC" secondAttribute="width" id="Nbh-l5-7k8"/>
+                                    <constraint firstItem="fnD-4C-RRK" firstAttribute="height" secondItem="gXm-sJ-2EC" secondAttribute="height" id="QBo-qT-GeN"/>
+                                    <constraint firstItem="fnD-4C-RRK" firstAttribute="height" secondItem="gXm-sJ-2EC" secondAttribute="height" id="TvA-oJ-arA"/>
+                                    <constraint firstItem="fnD-4C-RRK" firstAttribute="centerX" secondItem="5gM-oJ-OmV" secondAttribute="centerX" multiplier="1.5" id="Wwp-vz-KYF"/>
+                                    <constraint firstItem="fnD-4C-RRK" firstAttribute="width" secondItem="gXm-sJ-2EC" secondAttribute="width" id="oAh-xW-h7O"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" id="MHZ-ay-8tF">
+                                <rect key="frame" x="0.0" y="185" width="390" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PK3-iz-WoK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5gM-oJ-OmV" firstAttribute="top" secondItem="PK3-iz-WoK" secondAttribute="top" constant="10" id="qpF-Ps-bBQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Converter" image="percent.ar" catalog="system" selectedImage="percent.ar" id="1aq-zw-1c2"/>
                     <connections>
@@ -69,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fe7-6a-FdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="528" y="-674"/>
+            <point key="canvasLocation" x="527.69230769230762" y="-674.64454976303318"/>
         </scene>
         <!--New Order-->
         <scene sceneID="IcU-FU-jli">
