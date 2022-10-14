@@ -15,6 +15,7 @@
 		2B6BBFF428F984C000FD6013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6BBFF228F984C000FD6013 /* LaunchScreen.storyboard */; };
 		2B6BBFFC28F9877F00FD6013 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BBFFB28F9877F00FD6013 /* Unit.swift */; };
 		2B6BBFFE28F98D0100FD6013 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6BBFFD28F98D0100FD6013 /* ConverterViewController.swift */; };
+		2B83AF0328F9CBB30087E5D2 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83AF0228F9CBB30087E5D2 /* NewOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2B6BBFF528F984C000FD6013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B6BBFFB28F9877F00FD6013 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		2B6BBFFD28F98D0100FD6013 /* ConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		2B83AF0228F9CBB30087E5D2 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				2B6BBFE728F984BE00FD6013 /* AppDelegate.swift */,
 				2B6BBFE928F984BE00FD6013 /* SceneDelegate.swift */,
 				2B6BBFFD28F98D0100FD6013 /* ConverterViewController.swift */,
+				2B83AF0228F9CBB30087E5D2 /* NewOrderViewController.swift */,
 				2B6BBFEB28F984BE00FD6013 /* ViewController.swift */,
 				2B6BBFFB28F9877F00FD6013 /* Unit.swift */,
 				2B6BBFED28F984BE00FD6013 /* Main.storyboard */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B83AF0328F9CBB30087E5D2 /* NewOrderViewController.swift in Sources */,
 				2B6BBFEC28F984BE00FD6013 /* ViewController.swift in Sources */,
 				2B6BBFFC28F9877F00FD6013 /* Unit.swift in Sources */,
 				2B6BBFE828F984BE00FD6013 /* AppDelegate.swift in Sources */,
