@@ -104,75 +104,133 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RHF-YS-tSC">
-                                <rect key="frame" x="0.0" y="47" width="390" height="78"/>
+                                <rect key="frame" x="0.0" y="47.000000000000014" width="390" height="207.33333333333337"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LTn-wX-eY3">
                                         <rect key="frame" x="8" y="8" width="374" height="32"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <segments>
                                             <segment title="Espresso"/>
                                             <segment title="Americano"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="CoffeeTypeSwitch:" destination="8OA-CA-tq1" eventType="primaryActionTriggered" id="slQ-fb-ztA"/>
+                                        </connections>
                                     </segmentedControl>
-                                    <stackView opaque="NO" contentMode="top" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tey-lK-Qky">
-                                        <rect key="frame" x="8" y="39" width="374" height="31"/>
+                                    <stackView opaque="NO" contentMode="top" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OKn-8T-4fu" userLabel="Divider layer">
+                                        <rect key="frame" x="8" y="39" width="374" height="9.6666666666666643"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-pa-x32">
-                                                <rect key="frame" x="0.0" y="5.3333333333333286" width="56.666666666666664" height="20.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNa-xr-7y6" userLabel=" ">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="9.6666666666666661"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="top" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tey-lK-Qky" userLabel="Sugar layer">
+                                        <rect key="frame" x="8" y="48.666666666666671" width="374" height="47"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-pa-x32">
+                                                <rect key="frame" x="8" y="13.333333333333327" width="45" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="03f-XC-Whj">
-                                                <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="03f-XC-Whj" userLabel="Sugar Switch">
+                                                <rect key="frame" x="317" y="8" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Sugar1Switch:" destination="8OA-CA-tq1" eventType="primaryActionTriggered" id="Apb-qt-rhR"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="top" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MqC-tQ-ojU">
-                                        <rect key="frame" x="8" y="70" width="374" height="0.0"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="top" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SLj-yZ-HFq" userLabel="Spoons of Sugar layer">
+                                        <rect key="frame" x="8" y="95.666666666666657" width="374" height="16"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiM-Kz-QKP">
-                                                <rect key="frame" x="0.0" y="0.0" width="59" height="0.0"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spoons of Sugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBK-Tb-2ij">
+                                                <rect key="frame" x="8.0000000000000071" y="8" width="126.66666666666669" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aW4-nD-flj">
-                                                <rect key="frame" x="325" y="0.0" width="51" height="0.0"/>
-                                                <connections>
-                                                    <action selector="Sugar2Switch:" destination="8OA-CA-tq1" eventType="primaryActionTriggered" id="LbT-U3-hjN"/>
-                                                </connections>
-                                            </switch>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="top" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-d0-dxe">
-                                        <rect key="frame" x="8" y="70" width="374" height="0.0"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQM-nA-YsJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="0.0"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hH-ww-Tou">
+                                                <rect key="frame" x="198.33333333333334" y="8" width="10.333333333333343" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GqO-Q5-DrL">
-                                                <rect key="frame" x="325" y="0.0" width="51" height="0.0"/>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="zqi-WQ-Wlc">
+                                                <rect key="frame" x="272" y="8" width="94" height="0.0"/>
                                                 <connections>
-                                                    <action selector="Sugar3Switch:" destination="8OA-CA-tq1" eventType="primaryActionTriggered" id="rdP-Y3-qJ6"/>
+                                                    <action selector="SpoonsNo:" destination="8OA-CA-tq1" eventType="primaryActionTriggered" id="TzR-xa-bWn"/>
                                                 </connections>
-                                            </switch>
+                                            </stepper>
                                         </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="top" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MqC-tQ-ojU" userLabel="Time layer">
+                                        <rect key="frame" x="8" y="95.666666666666657" width="374" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiM-Kz-QKP">
+                                                <rect key="frame" x="8" y="8" width="179" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="BuC-jg-l5a">
+                                                <rect key="frame" x="187" y="8" width="179" height="50"/>
+                                                <connections>
+                                                    <action selector="deliveryTimeChanged:" destination="8OA-CA-tq1" eventType="primaryActionTriggered" id="OQb-3f-Lqh"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="top" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qAm-Hs-tWO" userLabel="Divider layer">
+                                        <rect key="frame" x="8" y="161.66666666666666" width="374" height="1.3333333333333428"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hj-Nm-5k6" userLabel=" ">
+                                                <rect key="frame" x="8" y="0.0" width="358" height="1.3333333333333333"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="top" distribution="equalSpacing" alignment="lastBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-d0-dxe" userLabel="Price layer">
+                                        <rect key="frame" x="8" y="163" width="374" height="36.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQM-nA-YsJ" userLabel="Total price">
+                                                <rect key="frame" x="8" y="7.9999999999999982" width="79.333333333333329" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$8.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wn-Pl-llu">
+                                                <rect key="frame" x="321.33333333333331" y="7.9999999999999982" width="44.666666666666686" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    </stackView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night delivery fee applied" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYy-BI-kSG">
+                                        <rect key="frame" x="8" y="199.33333333333334" width="374" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="linkColor"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XeE-4V-SjG"/>
-                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RHF-YS-tSC" firstAttribute="leading" secondItem="XeE-4V-SjG" secondAttribute="leading" id="NGT-w5-Lho"/>
                             <constraint firstItem="RHF-YS-tSC" firstAttribute="top" secondItem="XeE-4V-SjG" secondAttribute="top" id="X60-Sg-RDM"/>
@@ -182,12 +240,16 @@
                     <tabBarItem key="tabBarItem" title="New Order" image="list.bullet.rectangle" catalog="system" selectedImage="list.bullet.rectangle.fill" id="uRS-W9-sAT"/>
                     <connections>
                         <outlet property="CoffeeType" destination="LTn-wX-eY3" id="NuW-HQ-IuM"/>
+                        <outlet property="DeliveryTime" destination="BuC-jg-l5a" id="Ibu-Cg-eoO"/>
+                        <outlet property="NonWorkFeeLabel" destination="ZYy-BI-kSG" id="Z9b-Dj-ahM"/>
+                        <outlet property="Price" destination="7wn-Pl-llu" id="hGp-CZ-yvG"/>
+                        <outlet property="SpoonsLayer" destination="SLj-yZ-HFq" id="dVa-xW-GhW"/>
+                        <outlet property="SpoonsNo" destination="zqi-WQ-Wlc" id="rwT-Wf-Bgq"/>
+                        <outlet property="SpoonsNoLabel" destination="8hH-ww-Tou" id="09R-Db-id1"/>
                         <outlet property="Sugar1" destination="tey-lK-Qky" id="4AN-6n-99c"/>
                         <outlet property="Sugar2" destination="MqC-tQ-ojU" id="uQd-Fa-xCb"/>
                         <outlet property="Sugar3" destination="BRA-d0-dxe" id="wjl-u5-47h"/>
                         <outlet property="SugarSwitch1" destination="03f-XC-Whj" id="wmf-BW-xSL"/>
-                        <outlet property="SugarSwitch2" destination="aW4-nD-flj" id="94O-Hf-mjz"/>
-                        <outlet property="SugarSwitch3" destination="GqO-Q5-DrL" id="dFz-qp-uV8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ats-ce-UGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -199,17 +261,11 @@
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="percent.ar" catalog="system" width="118" height="128"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

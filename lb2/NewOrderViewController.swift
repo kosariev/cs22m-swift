@@ -4,37 +4,83 @@ class NewOrderViewController: UIViewController {
     @IBOutlet weak var Sugar1: UIStackView!
     @IBOutlet weak var Sugar2: UIStackView!
     @IBOutlet weak var Sugar3: UIStackView!
-    
+    @IBOutlet weak var SpoonsLayer: UIStackView!
+
     @IBOutlet weak var SugarSwitch1: UISwitch!
     @IBOutlet weak var SugarSwitch2: UISwitch!
     @IBOutlet weak var SugarSwitch3: UISwitch!
     @IBOutlet weak var CoffeeType: UISegmentedControl!
+    
+    @IBOutlet weak var Price: UILabel!
+    @IBOutlet weak var DeliveryTime: UIDatePicker!
+    @IBOutlet weak var SpoonsNo: UIStepper!
+    @IBOutlet weak var SpoonsNoLabel: UILabel!
+
+    @IBOutlet weak var NonWorkFeeLabel: UILabel!
+    @IBAction func SpoonsNo(_ sender: UIStepper) {
+        SpoonsNoLabel.text = Int(sender.value).description
+        calc()
+    }
+
+    @IBAction func CoffeeTypeSwitch(_ sender: UISegmentedControl) {
+        calc()
+    }
+
+    @IBAction func deliveryTimeChanged(_ sender: Any) {
+        calc()
+    }
 
     @IBAction func Sugar1Switch(_ sender: Any) {
-        print(CoffeeType.selectedSegmentIndex)
-        
-        SugarSwitch2.isOn = false
-        SugarSwitch3.isOn = false
         if SugarSwitch1.isOn {
-            Sugar2.isHidden = false
+            SpoonsLayer.isHidden = false
         } else {
-            Sugar2.isHidden = true
-            Sugar3.isHidden = true
+            SpoonsLayer.isHidden = true
         }
+        calc()
     }
-    @IBAction func Sugar2Switch(_ sender: Any) {
-        SugarSwitch3.isOn = false
-        if SugarSwitch2.isOn {
-            Sugar3.isHidden = false
+    
+    func calc() {
+        var price: Double
+        var isSugar: Int
+
+        price = 8.00
+        NonWorkFeeLabel.isHidden = true
+        
+        if CoffeeType.selectedSegmentIndex > 0 {
+            price = 12.00
+        }
+
+        if SugarSwitch1.isOn {
+            isSugar = 1
         } else {
-            Sugar3.isHidden = true
+            isSugar = 0
         }
-    }
-    @IBAction func Sugar3Switch(_ sender: Any) {
-        print("STATE3", SugarSwitch3.isOn)
+        
+        if (isSugar == 1) {
+            price = price + (0.5 * Double(SpoonsNo.value))
+        }
+        
+        let date = DeliveryTime.date
+        let components = Calendar.current.dateComponents([.hour], from: date)
+        let hour = components.hour!
+        
+        if hour < 5 {
+            price = price + 25
+            NonWorkFeeLabel.isHidden = false
+        }
+        else if hour >= 7 && hour < 11 {
+            price = price - 2
+        }
+        else if hour > 22 {
+            price = price + 25
+            NonWorkFeeLabel.isHidden = false
+        }
+        
+        Price.text = String(format: "$%.2f", price)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DeliveryTime.locale = Locale(identifier: "en_GB")
     }
 }
